@@ -32,7 +32,7 @@ export const Meta: FC<ISeo> = ({
 					<meta property='og:locale' content='en' />
 					<meta property='og:title' content={titleMerge(title)} />
 					<meta property='og:url' content={currentUrl} />
-					<meta property='og:image' content={image || logoImage} />
+					<meta property='og:image' content={image || "logo"} />
 					<meta property='og:site_name' content={siteName} />
 					<meta
 						property='og:description'

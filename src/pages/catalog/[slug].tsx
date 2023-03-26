@@ -4,7 +4,7 @@ import { GetStaticPaths, NextPage, GetStaticProps } from 'next';
 
 import { useRouter } from 'next/router';
 
-const ProductPage: NextPage = ({ product }) => {
+const ProductPage: NextPage<any> = ({ product }) => {
 	const router = useRouter();
 
 	if (router.isFallback) {

@@ -7,7 +7,7 @@ export const SectionTestimonials: FC = () => {
 				<div className="grid grid-cols-1 gap-y-8 lg:grid-cols-3 lg:items-center lg:gap-x-16">
 					<div className="max-w-xl text-center sm:text-left">
 						<h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-							Don't just take our word for it...
+							Dont just take our word for it...
 							<br className="hidden sm:block lg:hidden" />
 							Read reviews from our customers
 						</h2>
@@ -111,7 +111,7 @@ export const SectionTestimonials: FC = () => {
 
 											<div className="mt-4">
 												<p className="text-2xl font-bold text-pink-600 sm:text-3xl">
-													Stayin' Alive
+													Stayin Alive
 												</p>
 
 												<p className="mt-4 leading-relaxed text-gray-500">
@@ -182,7 +182,7 @@ export const SectionTestimonials: FC = () => {
 
 											<div className="mt-4">
 												<p className="text-2xl font-bold text-pink-600 sm:text-3xl">
-													Stayin' Alive
+													Stayin Alive
 												</p>
 
 												<p className="mt-4 leading-relaxed text-gray-500">
@@ -253,7 +253,7 @@ export const SectionTestimonials: FC = () => {
 
 											<div className="mt-4">
 												<p className="text-2xl font-bold text-pink-600 sm:text-3xl">
-													Stayin' Alive
+													Stayin Alive
 												</p>
 
 												<p className="mt-4 leading-relaxed text-gray-500">

@@ -12,7 +12,7 @@ export const LanguageDropdown = () => {
 		setDropdownOpen(!dropdownOpen);
 	};
 
-	const selectLanguage = language => {
+	const selectLanguage = (language: any) => {
 		setSelectedLanguage(language);
 		setDropdownOpen(false);
 	};
