@@ -7,7 +7,7 @@ import { onlyText } from '../string/clearText'
 import { ISeo } from './meta.types'
 import { MetaNoIndex } from '.'
 
-import logoImage from '@/assets/images/logo.png'
+import logoImage from '@/assets/images/logo.svg'
 
 export const Meta: FC<ISeo> = ({
 	title,

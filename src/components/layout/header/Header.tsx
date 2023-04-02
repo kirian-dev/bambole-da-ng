@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
 
-import logo from '@/assets/images/logo.png';
+import logo from '@/assets/images/logo.svg';
 import { menuListData } from './menuListData';
 import styles from './Header.module.css';
 import { LanguageDropdown } from './components/LanguageDropdown';
@@ -13,7 +13,7 @@ export const Header: FC = () => {
 		<header className="flex pt-6 w-[1280px]">
 			<div className=" flex  w-full items-center justify-between px-4">
 				<Link href="/" className="py-6 ">
-					<Image src={logo} width={100} height={100} alt="logo" />
+					<Image src={logo} width={85} height={85} alt="logo" />
 				</Link>
 				<ul className="w-full flex items-center justify-center ">
 					{menuListData &&

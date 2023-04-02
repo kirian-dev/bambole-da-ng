@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
-import logo from '@/assets/images/logo.png';
+import logo from '@/assets/images/logo.svg';
 
 export const Footer: FC = () => {
 	return (
