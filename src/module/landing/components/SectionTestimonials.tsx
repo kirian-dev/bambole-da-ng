@@ -27,9 +27,9 @@ export const SectionTestimonials: FC = () => {
 							offro
 						</p>
 
-						<div className="hidden lg:mt-8 lg:flex lg:gap-4">
+						<div className="hidden lg:mt-8 lg:flex lg:gap-4 pr-4">
 							<button
-								className="prev-button rounded-full border border-[#4a905d] p-4 text-[#4a905d] hover:bg-[#4a905d] hover:text-white"
+								className="prev-button rounded-full border border-[#4a905d] p-4 text-[#4a905d] hover:bg-[#4a905d] hover:text-white "
 								onClick={prevSlide}
 							>
 								<span className="sr-only">Previous Slide</span>
@@ -86,10 +86,10 @@ export const SectionTestimonials: FC = () => {
 					</div>
 				</div>
 
-				<div className="mt-2 flex justify-center gap-4 lg:hidden">
+				<div className="mt-2 flex justify-center gap-4 pr-4 lg:hidden">
 					<button
 						aria-label="Previous slide"
-						className="prev-button rounded-full border border-[#4a905d] p-4 text-[#4a905d] hover:bg-[#4a905d] hover:text-white"
+						className="prev-button rounded-full border border-[#4a905d] p-4 text-[#4a905d] hover:bg-[#4a905d] hover:text-white "
 						onClick={prevSlide}
 					>
 						<svg
