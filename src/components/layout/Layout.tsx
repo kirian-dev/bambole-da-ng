@@ -12,8 +12,8 @@ export const Layout: FC<LayoutProps> = ({ children }) => {
 	return (
 		<div className="flex flex-col justify-center items-center">
 			<Header />
-			<main className="flex justify-center w-full">
-				<div className="px-4">{children}</div>
+			<main className="flex justify-center w-full pt-24">
+				<div>{children}</div>
 			</main>
 			<Footer />
 		</div>

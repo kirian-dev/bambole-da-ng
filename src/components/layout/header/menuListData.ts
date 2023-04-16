@@ -6,18 +6,18 @@ interface IMenuListData {
 export const menuListData: IMenuListData[] = [
 	{
 		link: '/',
-		title: 'Home',
+		title: 'iniziale',
 	},
 	{
 		link: '/catalog',
-		title: 'Catalog',
+		title: 'Catalogare',
 	},
 	{
 		link: '/about',
-		title: 'About',
+		title: 'Informazioni ',
 	},
 	{
 		link: '/contacts',
-		title: 'Contacts',
+		title: 'Contatti',
 	},
 ];

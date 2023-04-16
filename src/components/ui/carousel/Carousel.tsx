@@ -1,42 +1,81 @@
 import { FC } from 'react';
-import { EffectCards, Pagination, Navigation, Autoplay } from 'swiper';
+import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import {
+	EffectCards,
+	Pagination,
+	Navigation,
+	Autoplay,
+	EffectCoverflow,
+} from 'swiper';
 
 import styles from './Carousel.module.css';
 import 'swiper/css';
 import 'swiper/css/effect-cards';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import imgToy from '@/assets/images/toy.webp';
-import Image from 'next/image';
-import img2 from '@/assets/images/banner.png';
+
+const images: string[] = [
+	require('@/assets/images/slider/slider-photo-5.jpg'),
+	require('@/assets/images/slider/slider-photo-6.jpg'),
+	require('@/assets/images/slider/slider-photo-10.jpg'),
+	require('@/assets/images/slider/slider-photo-4.jpg'),
+	require('@/assets/images/slider/slider-photo-8.jpg'),
+	require('@/assets/images/slider/slider-photo-9.jpg'),
+	require('@/assets/images/slider/slider-photo-2.jpg'),
+	require('@/assets/images/slider/slider-photo-3.jpg'),
+	require('@/assets/images/slider/slider-photo-1.jpg'),
+	require('@/assets/images/slider/slider-photo-7.jpg'),
+];
 
 export const Carousel: FC = () => {
 	return (
 		<div className={styles.container}>
 			<Swiper
-				autoplay={{
-					delay: 5000,
-					disableOnInteraction: false,
+				effect={'coverflow'}
+				grabCursor={true}
+				slidesPerView={'auto'}
+				coverflowEffect={{
+					rotate: 10,
+					stretch: 0,
+					depth: 100,
+					modifier: 2,
+					slideShadows: true,
 				}}
 				pagination={{
-					type: 'fraction',
+					clickable: true,
+					renderBullet: function(index, className) {
+						return `<span class="${className}" style="background-color: green; margin-top: 24px;"></span>`;
+					},
 				}}
-				navigation={true}
-				scrollbar={{
-					draggable: true,
+				navigation={{
+					prevEl: '.swiper-button-prev',
+					nextEl: '.swiper-button-next',
 				}}
-				effect={'cards'}
-				grabCursor={true}
-				modules={[EffectCards, Pagination, Navigation, Autoplay]}
+				breakpoints={{
+					580: {
+						slidesPerView: 2,
+					},
+					990: {
+						slidesPerView: 3,
+					},
+				}}
+				modules={[EffectCoverflow, Pagination, Navigation]}
 				className="mySwiper"
 			>
-				<SwiperSlide>
-					<Image alt="image" src={imgToy} />
-				</SwiperSlide>
-				<SwiperSlide>
-					<Image alt="image" src={img2} />
-				</SwiperSlide>
+				{images.map((image, index) => (
+					<SwiperSlide key={index}>
+						<Image
+							alt="image"
+							src={image}
+							width={700}
+							height={700}
+							className={styles.image}
+						/>
+					</SwiperSlide>
+				))}
+				<div className="swiper-button-prev" />
+				<div className="swiper-button-next" />
 			</Swiper>
 		</div>
 	);

@@ -20,13 +20,13 @@ export const LanguageDropdown = () => {
 	return (
 		<>
 			<Button
-				className="border-none  py-3 px-4"
+				className="border-none px-4  text-lg lg:text-2xl shadow-none"
 				onClick={toggleDropdown}
 				data-dropdown-toggle="dropdownLanguage"
 				data-dropdown-placement="bottom"
 				type="button"
 			>
-				EN
+				IT
 			</Button>
 			{dropdownOpen && (
 				<div
@@ -37,7 +37,7 @@ export const LanguageDropdown = () => {
 						className="h-48 py-2 overflow-y-auto text-gray-700 dark:text-gray-200"
 						aria-labelledby="dropdownUsersButton"
 					>
-						<li>EN</li>
+						<li>IT</li>
 					</ul>
 				</div>
 			)}

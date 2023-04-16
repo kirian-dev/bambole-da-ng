@@ -5,6 +5,12 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --primary: #6a59ff;
+  --white: #ffffff;
+  --bg: #f5f5f5;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -40,5 +46,121 @@ h2 {
 }
 
 .wrapper-width {
-  width: 1280px;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.menu {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  transform: translateX(-160%);
+  transition: all 0.5s;
+  z-index: 999;
+}
+
+.menu-active {
+  transform: translateX(0);
+}
+
+.blur {
+  width: 100vw;
+  height: 100vh;
+  left: 50%;
+  backdrop-filter: blur(2px);
+  position: absolute;
+}
+
+.menu__box {
+  display: block;
+  position: fixed;
+  top: 0;
+  width: 60%;
+  height: 100%;
+  margin: 0;
+  padding: 16px;
+  list-style: none;
+  background-color: #567e5f;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+  transition-duration: 0.25s;
+  transition: all 0.5s;
+}
+
+.menu-close {
+  position: absolute;
+  top: 0;
+  right: 24px;
+  cursor: pointer;
+  border-radius: 60%;
+}
+
+.menu-close:before,
+.menu-close:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 2px;
+  background: black;
+}
+
+.menu-close:before {
+  transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.menu-close:after {
+  transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+@media screen and (max-width: 479px) {
+  .image {
+    max-width: 320px;
+    max-height: 320px;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .image {
+    width: 420px;
+    height: 420px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .image {
+    width: 480px;
+    height: 480px;
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  color: rgb(44, 88, 44);
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.swiper-button-prev::after {
+  color: #4a905d;
+}
+.swiper-button-next::after {
+  color: #4a905d;
+}
+
+.swiper-button-prev {
+  left: 10px;
+}
+
+.swiper-button-next {
+  right: 10px;
 }

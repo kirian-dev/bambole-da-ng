@@ -1,23 +1,55 @@
 .container {
-  width: 25vw;
-  height: 50vh;
+
+  text-align: center;
+  margin: 0 auto;
 }
 
-.container .swiper {
+@media screen and (min-width: 580px) {
+  .container {
+    width: 570px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .container {
+    width: 900px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+
+.swiper {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
+
+.swiper-slide img {
+  display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
-.container .swiper-slide {
-  background-color: rgb(238, 238, 238);
+.image {
   border-radius: 20px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  transition: all 0.5s;
 }
 
-.container .swiper-button-next {
-  color: #4a905d;
-  right: 0;
+.image:hover {
+  transition: all 0.5s;
+  transform: scale(1.03);
 }
