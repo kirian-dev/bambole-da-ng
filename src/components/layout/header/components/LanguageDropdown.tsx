@@ -20,11 +20,12 @@ export const LanguageDropdown = () => {
 	return (
 		<>
 			<Button
-				className="border-none px-4  text-lg lg:text-2xl shadow-none"
+				className="px-4  text-lg lg:text-2xl shadow-none "
 				onClick={toggleDropdown}
 				data-dropdown-toggle="dropdownLanguage"
 				data-dropdown-placement="bottom"
 				type="button"
+				style={{ backgroundColor: 'none', border: 'none' }}
 			>
 				IT
 			</Button>
