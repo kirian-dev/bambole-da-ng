@@ -25,7 +25,7 @@ export const LanguageDropdown = () => {
 				data-dropdown-toggle="dropdownLanguage"
 				data-dropdown-placement="bottom"
 				type="button"
-				style={{ background: 'none', border: 'none' }}
+				style={{ background: 'none', border: 'none', boxShadow: 'none' }}
 			>
 				IT
 			</Button>
