@@ -173,7 +173,7 @@ a {
 }
 
 .welcome {
-  background-image: url(../../assets/images/landing/hero.jpg);
+  background-image: url(/img/landing/hero.jpg);
   background-attachment: fixed;
 }
 
@@ -188,7 +188,7 @@ a {
 }
 
 .hero {
-  background-image: url(../../assets/images/landing/hero-second.jpg);
+  background-image: url(/img/landing/hero-second.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -201,17 +201,17 @@ a {
 }
 
 .toys__section {
-  background-image: url(../../assets/images/landing/hero-third.jpg);
+  background-image: url(/img/landing/hero-third.jpg);
   background-attachment: fixed;
 }
 
 .accessories__section {
-  background-image: url(../../assets/images/landing/accessory-image.jpg);
+  background-image: url(/img/landing/accessory-image.jpg);
   background-attachment: fixed;
 }
 
 .materials__section {
-  background-image: url(../../assets/images/landing/materials.jpg);
+  background-image: url(/img/landing/materials.jpg);
 }
 
 .contacts__section {
