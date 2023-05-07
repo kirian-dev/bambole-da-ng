@@ -1,4 +1,3 @@
-import { Carousel } from '@/components/ui/carousel/Carousel';
 import { FC } from 'react';
 
 export const SectionProducts: FC = () => {
@@ -9,7 +8,6 @@ export const SectionProducts: FC = () => {
 					Cosa creo
 				</h2>
 				<p className="pb-10 md:text-lg">Qui puoi vedere esempi di lavoro</p>
-				<Carousel />
 				<div className="pt-10 md:text-lg">
 					<p className="pb-6">
 						Come artigiano appassionato, amo creare cose uniche e belle. Una
