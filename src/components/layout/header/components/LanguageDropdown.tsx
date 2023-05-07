@@ -20,7 +20,7 @@ export const LanguageDropdown = () => {
 	return (
 		<>
 			<Button
-				className="px-4  text-lg lg:text-2xl shadow-none "
+				className="px-4  text-lg font-normal shadow-none text-black"
 				onClick={toggleDropdown}
 				data-dropdown-toggle="dropdownLanguage"
 				data-dropdown-placement="bottom"

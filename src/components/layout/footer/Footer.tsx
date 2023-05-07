@@ -6,7 +6,7 @@ import logo from '@/assets/images/logo.svg';
 
 export const Footer: FC = () => {
 	return (
-		<footer className="w-full flex justify-center items-center py-12 md:py-24 px-4">
+		<footer className="w-full flex justify-center items-center py-12 md:py-24 px-4 md:pb-10">
 			<div className="wrapper-width flex flex-col ">
 				<div className="flex justify-between items-center">
 					<Link href="/" className="py-6 block ">

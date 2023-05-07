@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { FC, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 
 import logo from '@/assets/images/logo.svg';
 import { menuListData } from './menuListData';
@@ -8,21 +8,38 @@ import styles from './Header.module.css';
 import { LanguageDropdown } from './components/LanguageDropdown';
 import { HamburgerMenu } from './components/BurgerMenu';
 import menuIcon from '@/assets/images/menu.svg';
+
 export const Header: FC = () => {
 	const [menuActive, setMenuActive] = useState(false);
+	const [scrollPosition, setScrollPosition] = useState(0);
+
+	useEffect(() => {
+		const handleScroll = () => {
+			setScrollPosition(window.pageYOffset);
+		};
+
+		window.addEventListener('scroll', handleScroll);
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	}, []);
+
+	const headerClasses = `${styles.header} w-full fixed top-0 px-8 ${
+		scrollPosition > 0 ? `${styles.header__background}` : ''
+	}`;
 
 	return (
-		<header
-			className="backdrop-blur-md w-full fixed top-0"
-			style={{ zIndex: '999' }}
-		>
-			<div className="flex pt-6 wrapper-width  z-50 ">
-				<div className=" flex  w-full items-center justify-between px-4 ">
-					<Link href="/" className="py-2 ">
+		<header className={headerClasses}>
+			<div
+				className={`${styles.header__wrapper} `}
+			>
+				<div className="flex w-full items-center justify-between h-full">
+					<Link href="/">
 						<Image
 							src={logo}
-							width={85}
-							height={85}
+							width={80}
+							height={80}
 							alt="logo"
 							className={styles.image}
 						/>
@@ -30,7 +47,7 @@ export const Header: FC = () => {
 					<ul className="w-full hidden items-center justify-center lg:flex">
 						{menuListData &&
 							menuListData.map((item, index) => (
-								<li key={index} className="mr-8 text-2xl ">
+								<li key={index} className="mr-8 text-lg ">
 									<Link className={styles.link} href={item.link}>
 										{item.title.toUpperCase()}
 									</Link>

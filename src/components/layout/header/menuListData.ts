@@ -7,10 +7,14 @@ export const menuListData: IMenuListData[] = [
 	{
 		link: '/',
 		title: 'iniziale',
-	},
+	},	
 	{
-		link: '/catalog',
-		title: 'Catalogare',
+		link: '/toys',
+		title: 'Giocattoli',
+	},
+		{
+		link: '/accessories',
+		title: 'Accessori',
 	},
 	{
 		link: '/about',

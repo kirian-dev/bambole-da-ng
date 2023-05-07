@@ -1,10 +1,9 @@
 .container {
-
   text-align: center;
   margin: 0 auto;
 }
 
-@media screen and (min-width: 580px) {
+/* @media screen and (min-width: 580px) {
   .container {
     width: 570px;
   }
@@ -26,7 +25,7 @@
   .container {
     width: 1200px;
   }
-}
+} */
 
 .swiper {
   padding-top: 50px;
@@ -41,15 +40,17 @@
 .swiper-slide img {
   display: block;
   width: 100%;
-  height: auto;
 }
 
 .image {
   border-radius: 20px;
   transition: all 0.5s;
+  max-height: 500px !important;
 }
 
-.image:hover {
-  transition: all 0.5s;
-  transform: scale(1.03);
+@media screen and (max-width: 480px) {
+
+  .swiper-slide img {
+    height: 350px !important;
+  }
 }

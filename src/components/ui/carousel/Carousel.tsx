@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import {
 	EffectCards,
@@ -28,20 +28,15 @@ const images: string[] = [
 	require('@/assets/images/slider/slider-photo-7.jpg'),
 ];
 
-export const Carousel: FC = () => {
+interface CarouselProps {
+	images: StaticImageData;
+}
+
+export const Carousel: FC<CarouselProps> = ({ images }) => {
 	return (
 		<div className={styles.container}>
 			<Swiper
-				effect={'coverflow'}
-				grabCursor={true}
-				slidesPerView={'auto'}
-				coverflowEffect={{
-					rotate: 10,
-					stretch: 0,
-					depth: 100,
-					modifier: 2,
-					slideShadows: true,
-				}}
+				slidesPerView={1}
 				pagination={{
 					clickable: true,
 					renderBullet: function(index, className) {
@@ -52,28 +47,20 @@ export const Carousel: FC = () => {
 					prevEl: '.swiper-button-prev',
 					nextEl: '.swiper-button-next',
 				}}
-				breakpoints={{
-					580: {
-						slidesPerView: 2,
-					},
-					990: {
-						slidesPerView: 3,
-					},
-				}}
 				modules={[EffectCoverflow, Pagination, Navigation]}
 				className="mySwiper"
 			>
-				{images.map((image, index) => (
-					<SwiperSlide key={index}>
+				{/* {images.map((image, index) => ( */}
+					<SwiperSlide>
 						<Image
 							alt="image"
-							src={image}
-							width={700}
-							height={700}
+							src={images}
+							width={500}
+							height={500}
 							className={styles.image}
 						/>
 					</SwiperSlide>
-				))}
+				{/* ))} */}
 				<div className="swiper-button-prev" />
 				<div className="swiper-button-next" />
 			</Swiper>

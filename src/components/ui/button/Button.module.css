@@ -1,31 +1,20 @@
 .button {
-  background-color: #4a905d;
-  border: 1px solid #4a905d;
-  border-radius: 1.5rem;
+  background-color: #fcb0d8;
+  border: 1px solid #fcb0d8;
+  border-radius: 5px;
   box-sizing: border-box;
   cursor: pointer;
   display: inline-block;
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 700;
   line-height: 1;
   padding: 1rem 1.6rem;
   text-align: center;
-  text-decoration: none #0d172a solid;
-  text-decoration-thickness: auto;
   transition: all .1s cubic-bezier(.4, 0, .2, 1);
-  box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
   user-select: none;
-  -webkit-user-select: none;
   touch-action: manipulation;
 }
 
 .button:hover {
-  background-color:#497e63;
-  color: #fff;
-}
-
-@media (min-width: 768px) {
-  .button {
-    padding: 1rem 1.5rem;
-  }
+  background-color:#fda7d5;
 }
